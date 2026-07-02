@@ -17,7 +17,7 @@ const observer = new IntersectionObserver(
   { threshold: 0.12 }
 );
 document
-  .querySelectorAll(".section-head, .card, .step, .format-note, .about-grid, .contact-inner")
+  .querySelectorAll(".section-head, .card, .step, .tier, .perk, .format-note, .about-grid, .contact-inner")
   .forEach((el) => {
     el.classList.add("in-view");
     observer.observe(el);

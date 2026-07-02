@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mariner Math — Calculus Tutoring in Seattle</title>
+  <meta name="description" content="Mariner Math offers patient, expert calculus tutoring for middle school, high school, and college students in the Seattle area — in person or over Zoom." />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Hanken+Grotesk:wght@300..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- grain + chart-grid atmosphere layers -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="chart-grid" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a href="#top" class="brand" aria-label="Mariner Math home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 48 48" width="34" height="34">
+          <circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.55"/>
+          <path d="M24 3 L28 24 L24 45 L20 24 Z" fill="currentColor" opacity="0.9"/>
+          <path d="M3 24 L24 20 L45 24 L24 28 Z" fill="currentColor" opacity="0.45"/>
+          <circle cx="24" cy="24" r="2.4" fill="var(--ink)"/>
+        </svg>
+      </span>
+      <span class="brand-text">Mariner<em>Math</em></span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#services">Courses</a>
+      <a href="#approach">Approach</a>
+      <a href="about.html">About</a>
+      <a href="#contact" class="nav-cta">Chart a Course</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ============== HERO ============== -->
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow reveal">Calculus tutoring · Seattle &amp; online</p>
+        <h1 class="reveal" style="--d:.05s">
+          Chart your course<br />through <span class="ital-accent">calculus</span>.
+        </h1>
+        <p class="lede reveal" style="--d:.12s">
+          One-on-one tutoring that turns limits, derivatives, and integrals
+          from a fog bank into open water — for middle school, high school,
+          and college students across the Seattle area.
+        </p>
+        <div class="hero-actions reveal" style="--d:.19s">
+          <a href="#contact" class="btn btn-primary">Set up a session</a>
+          <a href="#services" class="btn btn-ghost">See what I teach</a>
+        </div>
+        <ul class="hero-meta reveal" style="--d:.26s">
+          <li><span class="dot"></span> In person around Seattle</li>
+          <li><span class="dot"></span> Or live over Zoom</li>
+        </ul>
+      </div>
+
+      <!-- the "chart": a plotted curve that reads as both a function and a sailing route -->
+      <figure class="hero-chart reveal" style="--d:.15s" aria-hidden="true">
+        <svg viewBox="0 0 420 420" class="chart-svg">
+          <defs>
+            <linearGradient id="curveGrad" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0" stop-color="var(--brass)"/>
+              <stop offset="1" stop-color="var(--brass-bright)"/>
+            </linearGradient>
+            <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+              <stop offset="0" stop-color="var(--brass)" stop-opacity="0.35"/>
+              <stop offset="1" stop-color="var(--brass)" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+
+          <!-- fine chart grid -->
+          <g class="chart-lines" stroke="var(--line)" stroke-width="1">
+            <line x1="0" y1="60" x2="420" y2="60"/><line x1="0" y1="120" x2="420" y2="120"/>
+            <line x1="0" y1="180" x2="420" y2="180"/><line x1="0" y1="240" x2="420" y2="240"/>
+            <line x1="0" y1="300" x2="420" y2="300"/><line x1="0" y1="360" x2="420" y2="360"/>
+            <line x1="60" y1="0" x2="60" y2="420"/><line x1="120" y1="0" x2="120" y2="420"/>
+            <line x1="180" y1="0" x2="180" y2="420"/><line x1="240" y1="0" x2="240" y2="420"/>
+            <line x1="300" y1="0" x2="300" y2="420"/><line x1="360" y1="0" x2="360" y2="420"/>
+          </g>
+
+          <!-- axes -->
+          <line x1="30" y1="390" x2="400" y2="390" stroke="var(--parchment-dim)" stroke-width="1.5"/>
+          <line x1="30" y1="390" x2="30" y2="20" stroke="var(--parchment-dim)" stroke-width="1.5"/>
+
+          <circle cx="210" cy="210" r="180" fill="url(#glow)"/>
+
+          <!-- the plotted "route" / curve -->
+          <path class="route" d="M30 360 C 110 360, 130 250, 190 210 S 300 120, 400 40"
+                fill="none" stroke="url(#curveGrad)" stroke-width="3.5"
+                stroke-linecap="round"/>
+
+          <!-- tangent line (a little calculus flourish) -->
+          <line class="tangent" x1="120" y1="330" x2="270" y2="180"
+                stroke="var(--parchment)" stroke-width="1.25" stroke-dasharray="4 5" opacity="0.7"/>
+
+          <!-- waypoints -->
+          <circle class="waypoint" cx="30" cy="360" r="4.5"/>
+          <circle class="waypoint" cx="190" cy="210" r="5.5"/>
+          <circle class="waypoint" cx="400" cy="40" r="4.5"/>
+
+          <!-- compass rose -->
+          <g class="compass" transform="translate(330,330)">
+            <circle r="34" fill="none" stroke="var(--parchment-dim)" stroke-width="1"/>
+            <circle r="24" fill="none" stroke="var(--parchment-dim)" stroke-width="0.75" opacity="0.6"/>
+            <path d="M0 -32 L5 0 L0 32 L-5 0 Z" fill="var(--brass-bright)"/>
+            <path d="M-32 0 L0 -5 L32 0 L0 5 Z" fill="var(--parchment-dim)"/>
+            <text x="0" y="-38" text-anchor="middle" class="compass-n">N</text>
+          </g>
+        </svg>
+        <figcaption class="chart-fn">ƒ(x) — a course plotted from confusion to confidence</figcaption>
+      </figure>
+    </section>
+
+    <!-- ============== MARQUEE ============== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Limits</span><span>·</span><span>Derivatives</span><span>·</span><span>Integrals</span><span>·</span>
+        <span>Related Rates</span><span>·</span><span>Optimization</span><span>·</span><span>Series</span><span>·</span>
+        <span>AP Calculus AB/BC</span><span>·</span><span>Pre-Calc</span><span>·</span>
+        <span>Limits</span><span>·</span><span>Derivatives</span><span>·</span><span>Integrals</span><span>·</span>
+        <span>Related Rates</span><span>·</span><span>Optimization</span><span>·</span><span>Series</span><span>·</span>
+        <span>AP Calculus AB/BC</span><span>·</span><span>Pre-Calc</span><span>·</span>
+      </div>
+    </div>
+
+    <!-- ============== SERVICES ============== -->
+    <section id="services" class="section">
+      <div class="section-head">
+        <p class="section-index">01 — Courses</p>
+        <h2>Wherever you are on the map,<br />there's a heading from here.</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <span class="card-depth">Grades 6–8</span>
+          <h3>Middle School Math</h3>
+          <p>Pre-algebra and algebra foundations, done right. We build the number
+             sense and habits that make everything downstream — including calculus —
+             feel far less intimidating.</p>
+          <ul class="card-list">
+            <li>Fractions, ratios &amp; proportions</li>
+            <li>Intro algebra &amp; graphing</li>
+            <li>Confidence &amp; study habits</li>
+          </ul>
+        </article>
+
+        <article class="card card-feature">
+          <span class="card-depth">Grades 9–12 · AP</span>
+          <h3>High School &amp; AP Calculus</h3>
+          <p>Pre-calc through AP Calculus AB &amp; BC. I help students actually
+             understand limits, derivatives, and integrals — not just memorize them —
+             so exams and problem sets stop feeling like a storm.</p>
+          <ul class="card-list">
+            <li>Pre-calculus &amp; trigonometry</li>
+            <li>AP Calculus AB / BC prep</li>
+            <li>Homework, test &amp; exam support</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="card-depth">Undergraduate</span>
+          <h3>College Calculus</h3>
+          <p>Calc I, II, and III, plus the transition to proof-based thinking.
+             Whether you're catching up or aiming for the top of the curve, we'll
+             navigate the coursework together.</p>
+          <ul class="card-list">
+            <li>Single &amp; multivariable calculus</li>
+            <li>Sequences, series &amp; techniques</li>
+            <li>Exam &amp; concept deep-dives</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============== APPROACH ============== -->
+    <section id="approach" class="section approach">
+      <div class="section-head">
+        <p class="section-index">02 — Approach</p>
+        <h2>Steady hands on the wheel.</h2>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">Ⅰ</span>
+          <h3>Get our bearings</h3>
+          <p>We start by finding exactly where things went foggy — the gap between
+             what you know and what the class assumes you know.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">Ⅱ</span>
+          <h3>Build intuition first</h3>
+          <p>Formulas stick when they mean something. We connect each idea to a
+             picture, a rate, an area — so it's yours, not just memorized.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">Ⅲ</span>
+          <h3>Chart the route</h3>
+          <p>We work real problems together, then hand you the wheel. You leave each
+             session able to do the next one alone.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">Ⅳ</span>
+          <h3>Arrive with confidence</h3>
+          <p>The goal isn't just a better grade — it's walking into the exam knowing
+             you've already sailed these waters.</p>
+        </div>
+      </div>
+
+      <div class="format-note">
+        <div class="format-item">
+          <h4>Where we meet</h4>
+          <p>In person around the greater Seattle area, or live over Zoom —
+             whichever is easier for you. Same focused, one-on-one session either way.</p>
+        </div>
+        <div class="format-item">
+          <h4>Who it's for</h4>
+          <p>Students who are stuck, students who want to get ahead, and everyone in
+             between. No question is too basic; that's the whole point.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== ABOUT ============== -->
+    <section id="about" class="section about">
+      <div class="about-grid">
+        <div class="about-visual" aria-hidden="true">
+          <div class="portrait-frame">
+            <img src="gabe.jpg" alt="Gabe Riedel" class="portrait-img" />
+          </div>
+        </div>
+        <div class="about-copy">
+          <p class="section-index">03 — About</p>
+          <h2>Hi, I'm Gabe.</h2>
+          <p class="about-lede">
+            I'm a Cal Poly SLO applied math graduate and an analyst with the Seattle
+            Mariners — and I love the moment calculus finally clicks for someone.
+          </p>
+          <p>
+            I studied the full calculus sequence and well beyond it, and I still use that
+            math every day building models for the Mariners. Just as important: I've spent
+            six summers going from camp counselor to program director, and years mentoring
+            and presenting as a Cal Poly ambassador. So I know the material deeply — and I
+            know how to actually teach it, patiently and without making you feel behind.
+          </p>
+          <p>
+            <a href="about.html" class="text-link">Read my full story →</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== CONTACT ============== -->
+    <section id="contact" class="section contact">
+      <div class="contact-inner">
+        <div class="section-head">
+          <p class="section-index">04 — Set sail</p>
+          <h2>Let's plot your first session.</h2>
+          <p class="contact-lede">
+            Tell me a little about the student and what you're working on. I'll get
+            back to you personally, usually within a day.
+          </p>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required />
+          </div>
+          <div class="field">
+            <label for="level">Level</label>
+            <select id="level" name="level">
+              <option value="Middle school">Middle school</option>
+              <option value="High school / AP" selected>High school / AP</option>
+              <option value="College">College</option>
+              <option value="Not sure yet">Not sure yet</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="format">Preferred format</label>
+            <select id="format" name="format">
+              <option value="Either works">Either works</option>
+              <option value="In person (Seattle)">In person (Seattle)</option>
+              <option value="Zoom">Zoom</option>
+            </select>
+          </div>
+          <div class="field field-full">
+            <label for="message">What would you like help with?</label>
+            <textarea id="message" name="message" rows="4" placeholder="e.g. My daughter is taking AP Calc AB and struggling with integrals..."></textarea>
+          </div>
+          <div class="field-full form-actions">
+            <button type="submit" class="btn btn-primary">Send message</button>
+            <p class="form-note" id="formNote">
+              Opens your email app addressed to
+              <a href="mailto:gaberiedel@gmail.com">gaberiedel@gmail.com</a>.
+            </p>
+          </div>
+        </form>
+
+        <div class="contact-direct">
+          <p>Prefer to just email directly?</p>
+          <a href="mailto:gaberiedel@gmail.com" class="email-link">gaberiedel@gmail.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <span class="brand-text">Mariner<em>Math</em></span>
+      <p>Calculus tutoring · Seattle &amp; online</p>
+    </div>
+    <p class="footer-fine">
+      © <span id="year"></span> Mariner Math. Independent tutoring — not affiliated
+      with or endorsed by any sports team or organization.
+    </p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

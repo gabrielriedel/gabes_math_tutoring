@@ -1,0 +1,6 @@
+# Keep private / personal files out of the public site
+*.pdf
+Gabe_Riedel *.pdf
+
+# OS cruft
+.DS_Store
